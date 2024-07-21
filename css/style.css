@@ -3,41 +3,78 @@
     box-sizing: border-box;
     overflow: hidden;
 }
-
+:root{
+    --text-gray: #3f4954;
+    --text-light:#686666da;
+    --bg-color:#0f0f0f;
+    --white:#ffffff;
+    --midnight:#104f55;  
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
 a {
     text-decoration: none;
+    color: var(--text-gray) ;
 }
+.toggle-collapse{
+    position: absolute;
+    top: 0;
+    width: 90%;
+    
+    
+    
+    
+}
+.toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+
+}
+
+.toggle-collapse .toggle-icons i {
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+
 
 .flex-row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
-
 }
 .nav-link{
     padding: 1.6rem 1rem;
     font-size: 1.1rem;
     position: relative;
+    font-family: abel;
+    font-size: 1.1rem;
+}
+.nav-link:hover{
+    background-color: var(--midnight);
+
+}
+.nav-link:hover a{
+    color: var(--white);
 }
 
 .nav .nav-item{
-    display: flex;
-    
-    
+    display: flex;   
+   
 }
 
 .nav {
-    background: red;
+    background:white;
     padding: 0 2rem;
     height: 0rem;
-    min-height: 30vh;
+    min-height: 10vh;
     overflow: hidden;
 }
 
 .nav-brand {
     font-size: 1.6rem;
     padding: 1rem 0;
+    font-family: Lexend;
+   
 }
 
 .nav-menu {
@@ -46,3 +83,26 @@ a {
 .social{
     padding: 1.4rem;
 }
+.social a i{
+    font-size: 1.1rem;
+    padding: 0 .2rem;
+}
+.social i:hover{
+    color: #a1c4cf;
+}
+
+/*-------------------------------responsive--------------------------------------------*/
+
+
+@media only screen and(max-width:750px){
+    .nav-menu,.nav-item{
+        flex-direction: column;
+    }
+    .toggle-collapse{
+        display: initial;
+        width: 10%;
+    }
+
+}
+
+/*----------------x---------------responsive----------------------------x----------------*/
